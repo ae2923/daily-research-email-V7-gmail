@@ -88,8 +88,12 @@ BATCHES = [
         "tickers": ["PTTA", "MP", "FCX"],
     },
     {
-        "industry": "Oil & Gas E&P",
-        "tickers": ["EXE", "NOG", "OXY", "CHRD", "CRC", "PR", "EQT", "MTDR"],
+        "industry": "Oil & Gas E&P (Permian / Mid-Con)",
+        "tickers": ["EXE", "NOG", "OXY", "CHRD"],
+    },
+    {
+        "industry": "Oil & Gas E&P (West / Appalachia)",
+        "tickers": ["CRC", "PR", "EQT", "MTDR"],
     },
 ]
 
