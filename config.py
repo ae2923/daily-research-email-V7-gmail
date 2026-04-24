@@ -71,12 +71,6 @@ TICKER_TO_CIK = {
     "PR":   "0001163566",
     "EQT":  "0000033213",
     "MTDR": "0001520006",
-    "APA":  "0001841666",
-
-    # ── TEMPORARY TEST TICKERS — remove after testing ──
-    "GS":   "0000886982",
-    "SYK":  "0000310764",
-    "ABBV": "0001551152",
 }
 
 # ─── Batches ────────────────────────────────────────────────
@@ -95,12 +89,7 @@ BATCHES = [
     },
     {
         "industry": "Oil & Gas E&P",
-        "tickers": ["EXE", "NOG", "OXY", "CHRD", "CRC", "PR", "EQT", "MTDR", "APA"],
-    },
-    # ── TEMPORARY TEST BATCH — remove after testing ──
-    {
-        "industry": "Test: Mixed Large Caps",
-        "tickers": ["GS", "SYK", "ABBV"],
+        "tickers": ["EXE", "NOG", "OXY", "CHRD", "CRC", "PR", "EQT", "MTDR"],
     },
 ]
 
@@ -140,10 +129,4 @@ TICKER_SEARCH_TERMS = {
     "PR":   ["Permian Resources"],
     "EQT":  ["EQT Corporation", "Appalachian gas", "Commonwealth LNG"],
     "MTDR": ["Matador Resources", "San Mateo midstream"],
-    "APA":  ["APA Corporation", "Suriname oil", "TotalEnergies Block 58"],
-
-    # ── TEMPORARY TEST TICKERS — remove after testing ──
-    "GS":   ["Goldman Sachs", "Goldman Sachs Group"],
-    "SYK":  ["Stryker", "Stryker Corporation", "Amplitude Vascular"],
-    "ABBV": ["AbbVie", "ELAHERE", "Mirvetuximab"],
 }
