@@ -165,8 +165,8 @@ Density rules:
   - Novelty 4-5: standard bullets, AND prefix L3 bullet 1 with [ESCALATE]. [ESCALATE] is MANDATORY at novelty ≥4 — it is how the PM knows to read this name first.
 Token discipline: A row's length should correlate with its novelty score. A novelty-1 row that takes as many tokens as a novelty-4 row is a prompt-following failure. The PM's scan speed depends on visual weight matching informational weight.
 
-── INDUSTRY SUMMARY ROW (required — always first) ──
-BEFORE the ticker rows, produce ONE industry-level <tr> with the industry name in the first <td>.
+── INDUSTRY SUMMARY ROW (required — always last) ──
+AFTER all ticker rows, produce ONE industry-level <tr> with the industry name in the first <td>.
 This row exists to tell the PM what is NEW at the sector level — not to teach the sector. Assume the PM knows the sector's base thesis (what the industry does, what its main variables are, what recent cycles looked like). Do not restate it.
   - L1: up to 3 bullets on the biggest sector-wide moves in the last 24h. USE Source 1C (price data) to report actual 1-day changes for key commodities/rates (e.g., "BTC +4.2% to $68,400" / "WTI -2.1% to $71.50"). Include the most important sector-wide event from Source 4 (regulatory action, commodity move, geopolitical event). Be specific. Same staleness rule as ticker rows.
   - L2: 2-3 bullets on the DELTA in macro drivers. Which variable's influence changed today? Did the sector move into a new phase of its cycle, or accelerate/decelerate within the existing phase? Ban: generic cycle descriptions ("hash price at post-halving low," "rates remain elevated") that were true last week too.
@@ -264,7 +264,8 @@ def analyze_batch(batch: dict) -> str:
         f"{batch.get('context_raw', 'No data')}\n\n"
         f"=== SOURCE 5: Verification Results (fact-checks of X.com claims) ===\n"
         f"{batch.get('verification_raw', 'No verification performed.')}\n\n"
-        f"Synthesize all sources. Produce the INDUSTRY SUMMARY ROW first (use Source 1C price data "
+        f"Synthesize all sources. Produce one <tr> per ticker in the order listed, "
+        f"then the INDUSTRY SUMMARY ROW last (use Source 1C price data "
         f"for L1 price moves), then one <tr> per ticker in the order listed. "
         f"High-signal X.com claims can go in L1 tagged [X.com] or [verified by search] "
         f"if Source 5 confirmed them. Refuted claims should be flagged in L2. "
