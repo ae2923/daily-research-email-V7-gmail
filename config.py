@@ -19,7 +19,7 @@ GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD", "")
 
 # ─── Models ─────────────────────────────────────────────────
 GROK_MODEL = "grok-4-1-fast"
-SEARCH_MODEL = "claude-haiku-4-5-20251001"       # Stage 2: financial news search
+SEARCH_MODEL = "claude-sonnet-4-5-20250514"       # Stage 2: financial news search
 ANALYSIS_MODEL = "claude-opus-4-5"       # Stage 3: synthesis
 
 # ─── Timing ─────────────────────────────────────────────────
